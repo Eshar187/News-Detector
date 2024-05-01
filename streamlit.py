@@ -45,7 +45,9 @@ if st.button("Submit",type="primary"):
     print(x)
     with open('countVector.pkl', 'rb') as h:
         modal = pickle.load(h)
+        st.write(x)
         arr = modal.transform(x).toarray()
+        
 
 
 
