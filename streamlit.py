@@ -42,7 +42,7 @@ if st.button("Submit",type="primary"):
     # st.write("You entered:", text)
     x = refiner(text)
     # st.write(x)
-    print(x)
+    # print(x)
     with open('countVector.pkl', 'rb') as h:
         modal = pickle.load(h)
         st.write(x)
