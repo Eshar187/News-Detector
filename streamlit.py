@@ -3,10 +3,11 @@ import sklearn
 import pickle
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
+import pandas
 # nltk.download('all')
 import re
 import nltk
-from nltk.stem import PorterStemmer,WordNetLemmatizer
+from nltk.stem import PorterStemmer
 
 from nltk.corpus import stopwords
 
@@ -40,13 +41,23 @@ if st.button("Submit",type="primary"):
 
     # st.write("You entered:", text)
     x = refiner(text)
-    st.write(x)
-
+    # st.write(x)
+    print(x)
+    with open('countVector.pkl', 'rb') as h:
+        modal = pickle.load(h)
+        arr = modal.transform(x).toarray()
 
 
 
     with open('News Detector.pkl', 'rb') as f:
         model = pickle.load(f)
 
-        prediction = model.predict(text)
-        st.write([prediction])
+        prediction = model.predict(arr)
+        if prediction == 3:
+            st.write("I guess this is a Business News")
+        elif prediction == 1:
+            st.write("I guess this is a World News")
+        elif prediction == 2:
+            st.write("I guess this is a Sports News")
+        else:
+            st.write("I guess this is a Science-Technology News")
