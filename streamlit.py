@@ -13,7 +13,7 @@ from nltk.corpus import stopwords
 import time
 
 
-st.markdown("<h2 style='text-align:center;'><strong>News Detector</strong></h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align:center;'>News Detector</h2>", unsafe_allow_html=True)
 
 # st.markdown("<h5 style='text-align:center;'>Enter Text</h5>", unsafe_allow_html=True)
 
