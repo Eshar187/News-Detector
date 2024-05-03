@@ -7,6 +7,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 # nltk.download('all')
 import re
 import nltk
+nltk.download('stopwords')
 from nltk.stem import PorterStemmer
 
 from nltk.corpus import stopwords
