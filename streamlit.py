@@ -115,39 +115,3 @@ if prompt := st.chat_input("Write Article",max_chars=5000):
 
 
 
-
-# if st.button("Submit",type="primary"):
-
-#     # st.write("You entered:", text)
-#     x = refiner(text)
-#     # st.write(x)
-#     # print(x)
-#     with open('countVector.pkl', 'rb') as h:
-#         modal = pickle.load(h)
-#         # st.write(x)
-#         arr = modal.transform(x).toarray()
-        
-
-
-
-#     with open('News Detector.pkl', 'rb') as f:
-#         model = pickle.load(f)
-
-#         prediction = model.predict(arr)
-# #Loader
-#         with st.spinner('Wait for it...'):
-#             time.sleep(5)
-#             st.success('Done!')
-
-
-#         if prediction == 3:
-#             st.write("👻 I guess this is a Business News")
-#         elif prediction == 1:
-#             st.write("👻 I guess this is a World News")
-#         elif prediction == 2:
-#             st.write("👻 I guess this is a Sports News")
-#         elif prediction == 4:
-#             st.write("👻 I guess this is a Science-Technology News")
-#         else:
-#             st.write("👻 News")
-
