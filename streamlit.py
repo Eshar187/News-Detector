@@ -3,7 +3,7 @@ import sklearn
 import pickle
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
-import pandas
+# import pandas
 # nltk.download('all')
 import re
 import nltk
